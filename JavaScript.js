@@ -104,7 +104,7 @@ function selectPlaceX1(){
     casilla1.appendChild(element);
     elegidoX1 = true
     tablero[0][0] = "x"
-    console.log(tablero[0][0])
+    gameControler();
   }
   
 }
@@ -119,7 +119,7 @@ function selectPlaceO1(){
       casilla1.appendChild(element);
       elegidoO1 = true
       tablero[0][0] = "O"
-      console.log(tablero[0][0])
+      gameControler();
     }
   }
 
@@ -130,7 +130,7 @@ function selectPlaceO1(){
       casilla2.appendChild(element);
       elegidoX2 = true
       tablero[0][1] = "x"
-      console.log(tablero[0][1])
+      gameControler();
     }
     
   }
@@ -145,7 +145,8 @@ function selectPlaceO1(){
         casilla2.appendChild(element);
         elegidoO2 = true
         tablero[0][1] = "O"
-        console.log(tablero[0][1])
+        gameControler();
+        
       }
     }
     function selectPlaceX3(){
@@ -155,7 +156,7 @@ function selectPlaceO1(){
         casilla3.appendChild(element);
         elegidoX3 = true
         tablero[0][2] = "x"
-        console.log(tablero[0][2])
+        gameControler();
       }
       
     }
@@ -170,7 +171,7 @@ function selectPlaceO1(){
           casilla3.appendChild(element);
           elegidoO3 = true
           tablero[0][2] = "O"
-          console.log(tablero[0][2])
+          gameControler();
         }
       }
       function selectPlaceX4(){
@@ -180,7 +181,7 @@ function selectPlaceO1(){
           casilla4.appendChild(element);
           elegidoX4 = true
           tablero[1][0] = "x"
-          console.log(tablero[1][0])
+          gameControler();
         }
         
       }
@@ -195,7 +196,7 @@ function selectPlaceO1(){
             casilla4.appendChild(element);
             elegidoO4 = true
             tablero[1][0] = "O"
-            console.log(tablero[1][0])
+            gameControler();
           }
         }
         function selectPlaceX5(){
@@ -205,7 +206,7 @@ function selectPlaceO1(){
             casilla5.appendChild(element);
             elegidoX5 = true
             tablero[1][1] = "x"
-            console.log(tablero[1][1])
+            gameControler();
           }
           
         }
@@ -220,7 +221,7 @@ function selectPlaceO1(){
             casilla5.appendChild(element);
             elegidoO5 = true
             tablero[1][1] = "O"
-            console.log(tablero[1][1])
+            gameControler();
           }
         }
       function selectPlaceX6(){
@@ -230,7 +231,7 @@ function selectPlaceO1(){
             casilla6.appendChild(element);
             elegidoX6 = true
             tablero[1][2] = "x"
-            console.log(tablero[1][2])
+            gameControler();
           }
             
         }
@@ -245,7 +246,7 @@ function selectPlaceO1(){
             casilla6.appendChild(element);
             elegidoO6 = true
             tablero[1][2] = "O"
-            console.log(tablero[1][2])
+            gameControler();
             }
           }
       function selectPlaceX7(){
@@ -255,7 +256,7 @@ function selectPlaceO1(){
             casilla7.appendChild(element);
             elegidoX7 = true
             tablero[2][0] = "x"
-            console.log(tablero[2][0])
+            gameControler();
           }
               
         }
@@ -270,7 +271,7 @@ function selectPlaceO1(){
             casilla7.appendChild(element);
             elegidoO7 = true
             tablero[2][0] = "O"
-            console.log(tablero[2][0])
+            gameControler();
           }
         }
       function selectPlaceX8(){
@@ -280,7 +281,7 @@ function selectPlaceO1(){
             casilla8.appendChild(element);
             elegidoX8 = true
             tablero[2][1] = "x"
-            console.log(tablero[2][1])
+            gameControler();
           }
                 
         }
@@ -294,7 +295,7 @@ function selectPlaceO1(){
         casilla8.appendChild(element);
         elegidoO8 = true
         tablero[2][1] = "O"
-        console.log(tablero[2][1])
+        gameControler();
           }
         }
         function selectPlaceX9(){
@@ -304,7 +305,7 @@ function selectPlaceO1(){
           casilla9.appendChild(element);
           elegidoX9 = true
           tablero[2][2] = "x"
-          console.log(tablero[2][2])
+          gameControler();
           }
         }
                 
@@ -318,7 +319,59 @@ function selectPlaceO1(){
           casilla9.appendChild(element);
           elegidoO9 = true
           tablero[2][2] = "O"
-          console.log(tablero[2][2])
+          gameControler();
           }
         }
-        
+      
+      function gameControler(){
+        if(tablero[0][0] === "x" && tablero[0][1] === "x" && tablero[0][2] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[0][0] === "O" && tablero[0][1] === "O" && tablero[0][2] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[1][0] === "x" && tablero[1][1] === "x" && tablero[1][2] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[1][0] === "O" && tablero[1][1] === "O" && tablero[1][2] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[2][0] === "x" && tablero[2][1] === "x" && tablero[2][2] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[2][0] === "O" && tablero[2][1] === "O" && tablero[2][2] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[0][0] === "x" && tablero[1][0] === "x" && tablero[2][0] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[0][0] === "O" && tablero[1][0] === "O" && tablero[2][0] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[0][1] === "x" && tablero[1][1] === "x" && tablero[2][1] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[0][1] === "O" && tablero[1][1] === "O" && tablero[2][1] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[0][2] === "x" && tablero[1][2] === "x" && tablero[2][2] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[0][2] === "O" && tablero[1][2] === "O" && tablero[2][2] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[0][0] === "x" && tablero[1][1] === "x" && tablero[2][2] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[0][0] === "O" && tablero[1][1] === "O" && tablero[2][2] === "O"){
+          console.log("gana O");
+        }
+        if(tablero[0][2] === "x" && tablero[1][1] === "x" && tablero[2][0] === "x"){
+          console.log("gana X");
+        }
+        if(tablero[0][2] === "O" && tablero[1][1] === "O" && tablero[2][0] === "O"){
+          console.log("gana O");
+        }
+      }
+
+   
